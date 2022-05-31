@@ -8,7 +8,7 @@ export default function App() {
   const [currentAccount, setCurrentAccount] = useState("");
   const [currentWaveCount, setCurrentWaveCount] = useState("");
   const [allWaves, setAllWaves] = useState([]);
-  const contractAddress = "0xF5fA322eaB31A6289d947ccDa5eaa3219aFdAE99";
+  const contractAddress = "0x3711e0744c0F822C3815458aec3D910B9944f91a";
   const contractABI = abi.abi;
 
   const getAllWaves = async () => {
@@ -73,6 +73,7 @@ export default function App() {
         count = await wavePortalContract.getTotalWaves();
         console.log("Retrieved total wave count...", count.toNumber());
         setCurrentWaveCount(count.toNumber());
+        getAllWaves();
       } else {
         console.log("Ethereum object doesn't exist!");
       }
