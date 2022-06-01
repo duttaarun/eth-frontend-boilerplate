@@ -160,7 +160,7 @@ export default function App() {
 
       <div className="dataContainer">
         <div className="header">
-          Wave Counter using Dapp/Solidity and Web3
+          Wave Counter using Web3
         </div>
 
         <div className="bio">
